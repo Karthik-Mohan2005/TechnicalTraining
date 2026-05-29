@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Image Gallery with Hover Captions</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+  
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover .caption {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Image Gallery</h1>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/1015/500/300" alt="Mountain">
+            <div class="caption">Beautiful Mountain View</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/1016/500/300" alt="Forest">
+            <div class="caption">Peaceful Forest</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/1025/500/300" alt="Dog">
+            <div class="caption">Cute Dog Portrait</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/1035/500/300" alt="Beach">
+            <div class="caption">Sunny Beach Escape</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/1040/500/300" alt="City">
+            <div class="caption">Modern City Skyline</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/1069/500/300" alt="River">
+            <div class="caption">Calm Riverside View</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

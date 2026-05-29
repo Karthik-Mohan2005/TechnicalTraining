@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            padding: 40px 20px;
+        }
+
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .plan {
+            background: #fff;
+            padding: 30px;
+            width: 280px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .plan h2 {
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .plan ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .plan ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .recommended {
+            border: 3px solid #28a745;
+            transform: scale(1.05);
+            position: relative;
+        }
+
+        .recommended-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #28a745;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pricing-container">
+
+        <div class="plan">
+            <h2>Basic</h2>
+            <div class="price">₹499/mo</div>
+
+            <ul>
+                <li>1 User</li>
+                <li>10 GB Storage</li>
+                <li>Email Support</li>
+            </ul>
+
+            <a href="#" class="btn">Choose Plan</a>
+        </div>
+
+
+        <div class="plan recommended">
+            <div class="recommended-badge">Recommended</div>
+
+            <h2>Pro</h2>
+            <div class="price">₹999/mo</div>
+
+            <ul>
+                <li>5 Users</li>
+                <li>100 GB Storage</li>
+                <li>Priority Support</li>
+            </ul>
+
+            <a href="#" class="btn">Choose Plan</a>
+        </div>
+
+  
+        <div class="plan">
+            <h2>Premium</h2>
+            <div class="price">₹1999/mo</div>
+
+            <ul>
+                <li>Unlimited Users</li>
+                <li>1 TB Storage</li>
+                <li>24/7 Support</li>
+            </ul>
+
+            <a href="#" class="btn">Choose Plan</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
