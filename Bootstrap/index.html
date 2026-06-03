@@ -31,7 +31,17 @@
     </div>
   </div>
 </div>
-<p abbr title="karthik">k</p>
+<input type="range" id="volume" min="0" max="100"
+       oninput="showValue(this.value)">
+
+<p id="result">50</p>
+
+<script>
+function showValue(val) {
+    document.getElementById("result").textContent = val;
+}
+</script>
+
   </body>
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </html>
