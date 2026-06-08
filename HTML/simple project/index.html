@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Validation</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+        <form>
+      <table id="table">
+         <tr>
+            <th><label for="name">Name</label></th>
+            <td>
+              <input type="text" id="name" placeholder="Enter your Name" />
+            </td>
+          </tr>
+          <tr>
+            <th><label for="password">Password</label></th>
+            <td>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your Password"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th><label for="email">Email</label></th>
+            <td>
+              <input type="email" id="email" placeholder="Enter your Email" />
+            </td>
+          </tr>
+          <tr>
+            <td><button type="button" onclick="validate()">Submit</button></td>
+            <td><button type="reset">Reset</button></td>
+          </tr>
+        </form>
+      </table>
+      <p id="text"></p>
+      <p id = "pass"></p>
+    </div>
+    <span id="length">8</span>
+    <input type="range" min="8" max="12" value="8" id="slider">
+    <script src="script.js"></script>
+  </body>
+</html>
