@@ -1,0 +1,21 @@
+package org.example;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TodoBusinessImpl {
+    private final TodoService todoService;
+    public TodoBusinessImpl(TodoService todoService){
+        this.todoService = todoService;
+    }
+    public List<String> retrieveTodoRelatedToString(String user){
+        List<String> filteredTodos = new ArrayList<>();
+        List<String> todos = todoService.retrieveTodo(user);
+        for(String todo:todos){
+            if(todo.contains("Spring")){
+                filteredTodos.add(todo);
+            }
+        }
+        return filteredTodos;
+    }
+}
